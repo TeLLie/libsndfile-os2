@@ -414,6 +414,11 @@ if (BUILD_SHARED_LIBS)
 				PRIVATE
 					${CMAKE_CURRENT_BINARY_DIR}/src/${SYMBOL_FILENAME}
 				)
+                elseif  (SYMBOL_OS MATCHES "os2")
+			target_sources (sndfile
+				PRIVATE
+					${CMAKE_CURRENT_BINARY_DIR}/src/${SYMBOL_FILENAME}
+				)
 		elseif (SYMBOL_OS MATCHES "darwin")
 			add_dependencies (sndfile GENFILES)
 			if (CMAKE_VERSION VERSION_LESS 3.13)
