@@ -1341,6 +1341,10 @@ psf_fwrite (const void *ptr, sf_count_t bytes, sf_count_t items, SF_PRIVATE *psf
 {	sf_count_t total = 0 ;
 	ssize_t	count ;
 
+	if (bytes == 0 || items == 0)
+		return 0 ;
+
+
 	if (psf->virtual_io)
 		return psf->vio.write (ptr, bytes*items, psf->vio_user_data) / bytes ;
 
