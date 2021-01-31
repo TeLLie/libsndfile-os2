@@ -236,7 +236,7 @@ psf_close_rsrc (SF_PRIVATE *psf)
 	psf->rsrc.filedes = -1 ;
 	return 0 ;
 } /* psf_close_rsrc */
-
+	
 int
 psf_set_stdio (SF_PRIVATE *psf)
 {	int	error = 0 ;
@@ -1343,7 +1343,6 @@ psf_fwrite (const void *ptr, sf_count_t bytes, sf_count_t items, SF_PRIVATE *psf
 
 	if (bytes == 0 || items == 0)
 		return 0 ;
-
 
 	if (psf->virtual_io)
 		return psf->vio.write (ptr, bytes*items, psf->vio_user_data) / bytes ;
