@@ -623,7 +623,7 @@ AS_IF([test "x$ax_cv_c_compiler_vendor" = "xgnu"], [
 				AX_APPEND_COMPILE_FLAGS([-mstackrealign], [CFLAGS])
 				],
 			[os2*], [
-				SHLIB_VERSION_ARG="-Wl,-export-symbols \$(top_srcdir)/src/Symbols.os2"
+				SHLIB_VERSION_ARG="-Wl \$(top_srcdir)/src/Symbols.os2"
 			])
 
 		COMPILER_IS_GCC=1
