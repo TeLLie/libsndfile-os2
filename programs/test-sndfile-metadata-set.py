@@ -157,7 +157,7 @@ print("\nTesting WAV metadata manipulation:")
 if os.path.isdir (test_dir):
     os.chdir (test_dir)
 
-if len (sys.argv) >= 1 and (sys.argv [1].endswith ("mingw32") or sys.argv [1].endswith ("i386-pc-os2-emx")):
+if len (sys.argv) >= 1 and (sys.argv [1].endswith ("mingw32") or sys.argv [1].endswith ("os2-emx")):
     needs_exe = True
 else:
     needs_exe = False
